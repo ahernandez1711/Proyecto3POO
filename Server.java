@@ -73,7 +73,10 @@ public class Server {
                             System.out.println("Pacman");
                            Client c = new Client("127.0.0.1", 5600, "Pacman");
                         }
-                        
+                        if(Comando.equals("Tetris")){
+                            System.out.println("Tetris");
+                           Client c = new Client("127.0.0.1", 5600, "Tetris");
+                        }
                         
                         
                     }

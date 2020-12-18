@@ -24,6 +24,7 @@ public class Reloj extends Thread{
         this.Pink = Pink;
         this.Purple = Purple;
     }
+    @Override
     public void run(){
         Blue.Nombre=Pink.Nombre=Red.Nombre=Purple.Nombre="Vulnerable";
         Blue.vulnerable=Pink.vulnerable=Red.vulnerable=Purple.vulnerable=true;
@@ -37,6 +38,6 @@ public class Reloj extends Thread{
         Red.Nombre="Red";
         Purple.Nombre="Purple";
         Blue.vulnerable=Pink.vulnerable=Red.vulnerable=Purple.vulnerable=false;
-        System.out.println("afawfasfawfaw");
+        
     }
 }

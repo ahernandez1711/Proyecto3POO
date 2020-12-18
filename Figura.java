@@ -9,9 +9,16 @@ package juegopacman;
  *
  * @author pablo
  */
-public class JuegoPacman {
-    public static void main(String[] args) {
-        Server a = new Server(5600);
+public class Figura {
+    int x;
+    int y;
+    String color;
+
+    public Figura(int x, int y, String color) {
+        this.x = x;
+        this.y = y;
+        this.color = color;
     }
+    
     
 }

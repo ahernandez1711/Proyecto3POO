@@ -33,6 +33,7 @@ public class Control extends javax.swing.JFrame {
         BtnDerecha = new javax.swing.JButton();
         BtnArriba = new javax.swing.JButton();
         BtnPacman = new javax.swing.JButton();
+        BtnTetris = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -47,6 +48,8 @@ public class Control extends javax.swing.JFrame {
         BtnArriba.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         BtnPacman.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        BtnTetris.setText("jButton1");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -64,7 +67,8 @@ public class Control extends javax.swing.JFrame {
                                 .addComponent(BtnAbajo, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(BtnDerecha, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(BtnPacman, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(BtnPacman, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BtnTetris))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -72,7 +76,9 @@ public class Control extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(BtnPacman, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(BtnTetris)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addComponent(BtnArriba, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -137,6 +143,7 @@ public class Control extends javax.swing.JFrame {
     public javax.swing.JButton BtnDerecha;
     public javax.swing.JButton BtnIzquierda;
     public javax.swing.JButton BtnPacman;
+    public javax.swing.JButton BtnTetris;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

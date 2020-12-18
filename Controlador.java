@@ -8,7 +8,7 @@ package controlpacman;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
-import pruebacliente.Client;
+import controlpacman.Client;
 
 /**
  *
@@ -29,6 +29,7 @@ public class Controlador implements ActionListener{
         GUI.BtnDerecha.addActionListener(this);
         GUI.BtnIzquierda.addActionListener(this);
         GUI.BtnPacman.addActionListener(this);
+        GUI.BtnTetris.addActionListener(this);
         GUI.setVisible(true);
     }
 
@@ -53,6 +54,10 @@ public class Controlador implements ActionListener{
         if(e.getSource().equals(GUI.BtnPacman)){
             Client Salida = new Client("127.0.0.1", 5500, "Pacman");
             System.out.println("Pacman");
+        }
+        if(e.getSource().equals(GUI.BtnTetris)){
+            Client Salida = new Client("127.0.0.1", 5500, "Tetris");
+            System.out.println("Tetris");
         }
     }
     

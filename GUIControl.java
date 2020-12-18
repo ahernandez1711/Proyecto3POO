@@ -16,7 +16,7 @@ import javax.swing.border.Border;
  *
  * @author pablo
  */
-public class GUIControl implements ActionListener {
+public class GUIControl {
     public GUI UI=new GUI();
     public JButton[][] MatrizTablero= new JButton[26][29];
     public int[][] Tablero = new int[26][29];
@@ -25,8 +25,10 @@ public class GUIControl implements ActionListener {
     public Fantasma Blue;
     public Fantasma Pink;
     public Fantasma Purple;
+    public Server Servidor;
     
-    public GUIControl(){
+    public GUIControl(Server entrada){
+        this.Servidor=entrada;
         _init_();
         generarBotones();
         this.Red= new Fantasma(Tablero, MatrizTablero, 11, 9,"Red",false);
@@ -34,10 +36,6 @@ public class GUIControl implements ActionListener {
         this.Pink= new Fantasma(Tablero, MatrizTablero, 11, 9,"Pink",false);
         this.Purple= new Fantasma(Tablero, MatrizTablero, 11, 18,"Purple",false);
         this.Pacman=new Jugador(Tablero, MatrizTablero, 12, 16,Red,Blue,Pink,Purple,this);
-        UI.BtnIzquierda.addActionListener(this);
-        UI.BtnDerecha.addActionListener(this);
-        UI.BtnArriba.addActionListener(this);
-        UI.BtnAbajo.addActionListener(this);
         this.Pacman.start();
         this.Red.start();
         this.Purple.start();
@@ -548,19 +546,5 @@ public class GUIControl implements ActionListener {
         this.Tablero[25][22]=5;
     }
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        if(e.getSource().equals(UI.BtnArriba)){
-           Pacman.movimiento=2;
-        }
-        if(e.getSource().equals(UI.BtnAbajo)){
-           Pacman.movimiento=3;
-        }
-        if(e.getSource().equals(UI.BtnDerecha)){
-           Pacman.movimiento=0;
-        }
-        if(e.getSource().equals(UI.BtnIzquierda)){
-           Pacman.movimiento=1;
-        }
-    }
+
 }
